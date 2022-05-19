@@ -40,18 +40,40 @@
     </div>
 
     <form action="" class="search-form">
-        <input type="search" id="search-box" placeholder="search here...">
+        <input type="search" id="search-box" placeholder="search here..." onkeyup="search()">
         <label for="search-box" class="fas fa-search"></label>
+        <ol id='list'>
+            <li class="prod">americano</li>
+            <li class="prod">black coffee</li>
+            <li class="prod">frappuccino</li>
+            <li class="prod">Cappuccino</li>
+            <li class="prod">espresso</li>
+            <li class="prod">chocolate donuts</li>
+            <li class="prod">Creamy cupcake</li>
+            <li class="prod">sweet bread</li>
+            <li class="prod">Garlic breads</li>
+            <li class="prod">fresh fruit donut</li>
+            <li class="prod">American heritage chocolate cake</li>
+            <li class="prod">chocolate cake</li>
+            <li class="prod">straberry cake</li>
+            <li class="prod">Icecream fun</li>
+            <li class="prod">brownie</li>
+        </ol>
     </form>
 
-    <div class="shopping-cart">
+    <!-- <div class="shopping-cart">
+        <h4 class="empty">Your cart is empty</h4>
         <div class="box">
             <i class="fas fa-trash"></i>
             <img src="image/coffee2.png" alt="">
             <div class="content">
                 <h3>Frappuccino</h3>
                 <span class="price">$10.99/-</span>
-                <span class="quantity">qty : 1</span>
+                <span class="quantity">qty:</span>
+                <br>
+                <span class="add">+</span>
+                <span class="add">1</span>
+                <span class="add">-</span>
             </div>
         </div>
         <div class="box">
@@ -74,7 +96,7 @@
         </div>
         <div class="total"> total : $19.69/- </div>
         <a href="#" class="btn">checkout</a>
-    </div>
+    </div> -->
 
     <form action="" class="login-form">
         <h3>login now</h3>
@@ -96,7 +118,7 @@
     <div class="content">
         <h3>Welcome to <span>BusyBean</span></h3>
         <p>So what are you gonna order today to make you happy?</p>
-        <a href="#" class="btn">Order now</a>
+        <a href="#features" class="btn">Order now</a>
     </div>
 
 </section>
@@ -113,23 +135,23 @@
 
         <div class="box">
             <img src="image/feature-img-1.png" alt="">
-            <h3>Coffee</h3>
+            <h3 class ="productname">Coffee</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
-            <a href="#" class="btn">Add to cart</a>
+            <a href="#" class="btn addtocart" data-product-id ="19">Add to cart</a>
         </div>
 
         <div class="box">
             <img src="image/feature-img-2.jpg" alt="">
-            <h3>Breads</h3>
+            <h3 class ="productname">Breads</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
-            <a href="#" class="btn">Add to cart</a>
+            <a href="#" class="btn addtocart" data-product-id ="20">Add to cart</a>
         </div>
 
         <div class="box">
             <img src="image/feature-img-3.jpg" alt="">
-            <h3>Cakes and pasteries</h3>
+            <h3 class ="productname">Cakes and pasteries</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
-            <a href="#" class="btn">Add to cart</a>
+            <a href="#" class="btn addtocart" data-product-id ="21">Add to cart</a>
         </div>
 
     </div>
@@ -150,8 +172,8 @@
 
             <div class="swiper-slide box">
                 <img src="image/feature-img-1.png" alt="">
-                <h3>Black Coffee</h3>
-                <div class="price"> $10.99/- </div>
+                <h3 class ="productname">Black Coffee</h3>
+                <div class="price pricevalue"> $10.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -159,13 +181,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="1">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/coffee2.png" alt="">
-                <h3>Frappuccino</h3>
-                <div class="price"> $10.99/- </div>
+                <h3 class ="productname">Frappuccino</h3>
+                <div class="price pricevalue"> $10.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -173,13 +195,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="2">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/americano.jpg" alt="">
-                <h3>americano</h3>
-                <div class="price"> $10.99/- </div>
+                <h3 class ="productname">americano</h3>
+                <div class="price pricevalue"> $10.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -187,13 +209,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="3">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/coffee.png" alt="">
-                <h3>Cappuccino</h3>
-                <div class="price"> $10.99/- </div>
+                <h3 class ="productname">Cappuccino</h3>
+                <div class="price pricevalue"> $10.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -201,13 +223,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="4">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/espresso.jpg" alt="">
-                <h3>espresso</h3>
-                <div class="price"> $10.99/- </div>
+                <h3 class ="productname">espresso</h3>
+                <div class="price pricevalue"> $10.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -215,7 +237,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="5">add to cart</a>
             </div>
 
         </div>
@@ -228,8 +250,8 @@
 
             <div class="swiper-slide box">
                 <img src="image/donut.jpg" alt="">
-                <h3>Chocolate donuts</h3>
-                <div class="price"> $4.99/-</div>
+                <h3 class ="productname">Chocolate donuts</h3>
+                <div class="price pricevalue"> $4.99/-</div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -237,13 +259,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="6">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/cupcakes.jpg" alt="">
-                <h3>Creamy cupcakes</h3>
-                <div class="price"> $6.99/-</div>
+                <h3 class ="productname">Creamy cupcakes</h3>
+                <div class="price pricevalue"> $6.99/-</div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -251,13 +273,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="7">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/bread2.jpg" alt="">
-                <h3>Sweet bread</h3>
-                <div class="price"> $6.99/-</div>
+                <h3 class ="productname">Sweet bread</h3>
+                <div class="price pricevalue"> $6.99/-</div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -265,13 +287,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="8">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/feature-img-2.jpg" alt="">
-                <h3>Garlic breads</h3>
-                <div class="price"> $10.99/- </div>
+                <h3 class ="productname">Garlic breads</h3>
+                <div class="price pricevalue"> $10.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -279,13 +301,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="9">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/feature-img-3.jpg" alt="">
-                <h3>Fresh Fruit donuts</h3>
-                <div class="price"> $10.99/- </div>
+                <h3 class ="productname">Fresh Fruit donuts</h3>
+                <div class="price pricevalue"> $10.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -293,7 +315,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="10">add to cart</a>
             </div>
 
         </div>
@@ -307,8 +329,8 @@
             
             <div class="swiper-slide box">
                 <img src="image/cake.jpg" alt="">
-                <h3>American heritage chocolate cake</h3>
-                <div class="price"> $20.99/- </div>
+                <h3 class ="productname">American heritage chocolate cake</h3>
+                <div class="price pricevalue"> $20.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -316,13 +338,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="11">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/cake2.jpg" alt="">
-                <h3>Chocolate Cake</h3>
-                <div class="price"> $20.99/- </div>
+                <h3 class ="productname">Chocolate Cake</h3>
+                <div class="price pricevalue"> $20.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -330,13 +352,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="12">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/cake3.jpg" alt="">
-                <h3>Straberry Cake</h3>
-                <div class="price"> $20.99/- </div>
+                <h3 class ="productname">Straberry Cake</h3>
+                <div class="price pricevalue"> $20.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -344,13 +366,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="13">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/cake4.jpg" alt="">
-                <h3>Icecream fun</h3>
-                <div class="price"> $20.99/- </div>
+                <h3 class ="productname">Icecream fun</h3>
+                <div class="price pricevalue"> $20.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -358,13 +380,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="14">add to cart</a>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/cake5.jpg" alt="">
-                <h3>Brownie</h3>
-                <div class="price"> $20.99/- </div>
+                <h3 class ="productname">Brownie</h3>
+                <div class="price pricevalue"> $20.99/- </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -372,7 +394,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn addtocart" data-product-id ="15">add to cart</a>
             </div>
 
         </div>
@@ -393,20 +415,20 @@
 
         <div class="box">
             <img src="image/feature-img-1.png" alt="">
-            <h3>Black coffee</h3>
-            <a href="#" class="btn">Order now</a>
+            <h3 class ="productname">Black coffee</h3>
+            <a href="#" class="btn addtocart" data-product-id ="16">Add to cart</a>
         </div>
 
         <div class="box">
             <img src="image/cake2.jpg" alt="">
-            <h3>Chocolate cake</h3>
-            <a href="#" class="btn">Order now</a>
+            <h3 class ="productname">Chocolate cake</h3>
+            <a href="#" class="btn addtocart" data-product-id ="17">Add to cart</a>
         </div>
 
         <div class="box">
             <img src="image/cupcakes.jpg" alt="">
-            <h3>Creamy cupcakes</h3>
-            <a href="#" class="btn">Order now</a>
+            <h3 class ="productname">Creamy cupcakes</h3>
+            <a href="#" class="btn addtocart" data-product-id ="18">Add to cart</a>
         </div>
 
     </div>
@@ -607,6 +629,8 @@
 
 <!-- custom js file link  -->
 <script src="js/script1.js"></script>
+<script src="js/cartscript.js"></script>
+<script src="js/search.js"></script>
 
 </body>
 </html>
