@@ -25,11 +25,24 @@ video.addEventListener('play', () => {
       .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
       .withFaceLandmarks()
       .withFaceExpressions();
+    console.log("The detections : ", detections[0].expressions.happy);
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
     faceapi.draw.drawDetections(canvas, resizedDetections);
     faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
     const x = faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
-    console.log(String(x));
-  }, 100);
+    const h = detections[0].expressions.happy;
+    console.log("The detection : ", detections[0].expressions.neutral);
+    const n = detections[0].expressions.neutral;
+    console.log("The detection : ", detections[0].expressions.surprise);
+    const s = detections[0].expressions.surprise;
+    if(h>n){
+      window.location.assign("happy.html");
+    } else if(s>n){
+      window.location.assign("surprise.html");
+    } else{
+      window.location.assign("neutral.html");
+    }
+
+  }, 5000);
 });
