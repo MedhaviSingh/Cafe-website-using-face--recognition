@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page to enter the site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"</script>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0px; 
+            background-image: url('main-bg2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="mb-5">
+        <h3 class="mb-3">Lets get in</h3>
+        <input type="text" placeholder="Username" id="userInp" class="form-control mb-3">
+        <input type="password" placeholder="Password" id="passInp" class="form-control mb-3">
+        <div class="custom-control custom-switch mb-3">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Keep me logged in</label>
+          </div>
+        <button type ="text" id ="sub_btn" class="btn btn-outline-primary mb-3 w-100">Sign In</button>
+        <a href="register.html" class="badge badge-secondary py-1 w-100">Want to Create a new account?</a>
+    </div>
+
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyBrGxaWUGQ8dmW74JyAIVagyoFPwl5mG4c",
+        authDomain: "face-recognition-d737d.firebaseapp.com",
+        databaseURL: "https://face-recognition-d737d-default-rtdb.firebaseio.com",
+        projectId: "face-recognition-d737d",
+        storageBucket: "face-recognition-d737d.appspot.com",
+        messagingSenderId: "53889593708",
+        appId: "1:53889593708:web:4a1e90b25d725c14d54349",
+        measurementId: "G-TXFF0P2HNX"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      import{ getDatabase, ref, set, child, get}
+        from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+        
+        const db =getDatabase();
+
+        const username = document.getElementById('userInp');
+        const pass = document.getElementById('passInp');
+        const submit = document.getElementById('sub_btn');
+
+        function Authentication(){
+            const dbref = ref(db);
+            console.log(dbref);
+            get(child(dbref,"userslist/"+username.value)).then((snapshot)=>{
+                if(snapshot.exists()){
+                    let dbpass = snapshot.val().password;
+                    console.log(dbpass);
+                    if(dbpass == pass.value){
+                        login(snapshot.val());
+                    }
+                    else{
+                        alert("User doesn't exist");
+                    }
+                }
+                else{
+                    alert("Username or password is invalid");
+                }
+            });
+        }
+
+        function login(user){
+            let keeploggedin = document.getElementById('customSwitch1').checked;
+
+            if(!keeploggedin){
+                sessionStorage.setItem('user',JSON.stringify(user));
+                window.location ="index2.html";
+            }
+            else{
+                localStorage.setItem('keeploggedin','yes');
+                localStorage.setItem('user',JSON.stringify(user));
+                window.location = "index.html";
+            }
+        } 
+
+        submit.addEventListener('click',Authentication);
+
+    </script>
+    </div>
+</body>
+</html>

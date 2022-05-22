@@ -38,7 +38,7 @@ video.addEventListener('play', () => {
     const s = detections[0].expressions.surprise;
     if(h>n){
       window.location.assign("happy.html");
-    } else if(s>n){
+    }else if(s>n){
       window.location.assign("surprise.html");
     } else{
       window.location.assign("neutral.html");
