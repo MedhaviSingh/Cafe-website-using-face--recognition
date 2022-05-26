@@ -11,7 +11,7 @@ Then based on these emotions the website suggests you the type of food you can o
 
 <img src="image/logo.webp"></img>
 
-## Table of cantent
+## Table of content
 
 * Preview
 * How it works?
@@ -44,8 +44,8 @@ Then based on these emotions the website suggests you the type of food you can o
 
 ## TechStack
 
-### The key technology used:
-I am using prebuilt face-api.min.js for the face detection.
+### The key technologies used:
+I am using face-api.min.js for the face detection. And firebase for storing the data of registered users.
 
 <img src="image/tech.png"></img>
 
@@ -56,7 +56,7 @@ I am using prebuilt face-api.min.js for the face detection.
 * To run this website start with register.html file.
   
 ### Setup
-1. Run npm install in the root directory to install all      necassary dependencies.
+1. Run npm install in the root directory to install all necassary dependencies.
 
 
 
