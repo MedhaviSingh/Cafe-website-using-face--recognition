@@ -712,3 +712,8 @@ section{
 .prod{
    display: list-item;    
   } 
+
+
+.cartimg > img{
+    width: 100px;
+}

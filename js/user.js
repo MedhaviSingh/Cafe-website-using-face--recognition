@@ -14,12 +14,12 @@
             }
         }
 
-        function signout(){
-            sessionStorage.removeItem('user');
-            localStorage.removeItem('user');
-            localStorage.removeItem('keeploggedin');
-            window.location = "home.html";
-        }
+        // function signout(){
+        //     sessionStorage.removeItem('user');
+        //     localStorage.removeItem('user');
+        //     localStorage.removeItem('keeploggedin');
+        //     window.location = "home.html";
+        // }
 
         window.onload = function(){
             getusername();
@@ -28,11 +28,6 @@
               userlink.classList.replace("nav-link", "btn");
               userlink.classList.add("btn-primary");
               userlink.href = "register.html";
-
-            //   signoutlink.innerText = "login";
-            //   signoutlink.classList.replace("nav-link","btn");
-            //   signoutlink.classList.add("btn-success");
-            //   signoutlink.href = "login.html";
             }
 
             else{
@@ -42,9 +37,5 @@
                 userlink.classList.remove("btn-primary");
                 userlink.href = "#";
 
-                // signoutlink.innerText = "Sign Out";
-                // signoutlink.classList.replace("btn", "nav-link");
-                // signoutlink.classList.remove("btn-success");
-                // signoutlink.href = "javascript:Signout()";
             }
         }

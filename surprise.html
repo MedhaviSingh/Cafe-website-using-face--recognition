@@ -61,42 +61,11 @@
         </ol>
     </form>
 
-    <!-- <div class="shopping-cart">
-        <h4 class="empty">Your cart is empty</h4>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="image/coffee2.png" alt="">
-            <div class="content">
-                <h3>Frappuccino</h3>
-                <span class="price">$10.99/-</span>
-                <span class="quantity">qty:</span>
-                <br>
-                <span class="add">+</span>
-                <span class="add">1</span>
-                <span class="add">-</span>
-            </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="image/cake5.jpg" alt="">
-            <div class="content">
-                <h3>Brownie</h3>
-                <span class="price">$20.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="image/feature-img-2.jpg" alt="">
-            <div class="content">
-                <h3>Garlic bread</h3>
-                <span class="price">$10.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-        <div class="total"> total : $19.69/- </div>
-        <a href="#" class="btn">checkout</a>
-    </div> -->
+    <div class="shopping-cart cart" id="cart">
+        <div class="productname"></div>
+        <div id="productname"></div>
+        <a href="placed.html" class="btn">checkout</a>
+    </div>
 
     <form action="" class="login-form">
         <h3>Hello!!</h3>
@@ -114,7 +83,7 @@
 
     <div class="content">
         <h3 id="hh"></h3>
-        <p>Surprise is the greatest gift which life can grant us. Order anything you want today!</p>
+        <p>Surprise is the greatest gift which life can grant us. So Order anything you want today!</p>
         <a href="#features" class="btn">Order now</a>
     </div>
 
@@ -130,25 +99,28 @@
     
     <div class="box-container">
 
-        <div class="box">
-            <img src="image/coffee2.png" alt="">
-            <h3 class ="productname">Frappuccino</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
-            <a href="#" class="btn addtocart" data-product-id ="19">Add to cart</a>
+        <div class="box buyitems" id="item16">
+            <img src="image/coffee.png" alt="">
+            <h3 class ="productname">Cappuccino</h3>
+            <p>A well-made cappuccino with incredible flavor and texture. Why not try this one?</p>
+            <button onclick="addtocart(item4)" class="btn addtocart">add to cart</button>
         </div>
 
-        <div class="box">
-            <img src="image/donut.jpg" alt="">
-            <h3 class ="productname">chocolate donut</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
-            <a href="#" class="btn addtocart" data-product-id ="20">Add to cart</a>
+        <div class="box buyitems" id="item17">
+            <img src="image/bread2.jpg" alt="">
+            <h3 class ="productname">Sweet Bread</h3>
+            <p>Happiness is a ....warm sweet bread.
+                fresh from the oven. try it!
+            </p>
+            <button onclick="addtocart(item8)" class="btn addtocart">add to cart</button>
         </div>
 
-        <div class="box">
-            <img src="image/feature-img-3.jpg" alt="">
-            <h3 class ="productname">Fresh fruit donuts</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
-            <a href="#" class="btn addtocart" data-product-id ="21">Add to cart</a>
+        <div class="box buyitems" id="item18">
+            <img src="image/cake4.jpg" alt="">
+            <h3 class ="productname">Icecream fun</h3>
+            <p>What do you do when ice cream says "you and me. We are mint to be.." taste it.
+            </p>
+            <button onclick="addtocart(item14)" class="btn addtocart">add to cart</button>
         </div>
 
     </div>
@@ -165,9 +137,9 @@
 
     <div class="swiper product-slider">
 
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper prodlist">
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item1">
                 <img src="image/feature-img-1.png" alt="">
                 <h3 class ="productname">Black Coffee</h3>
                 <div class="price pricevalue"> $10.99/- </div>
@@ -178,10 +150,11 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="1">add to cart</a>
+                <button onclick="addtocart(item1)" class="btn addtocart">add to cart</button>
+                <!-- <a href="#" class="btn addtocart" data-product-id ="1">add to cart</a> -->
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item2">
                 <img src="image/coffee2.png" alt="">
                 <h3 class ="productname">Frappuccino</h3>
                 <div class="price pricevalue"> $10.99/- </div>
@@ -192,10 +165,11 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="2">add to cart</a>
+                <button onclick="addtocart(item2)" class="btn addtocart">add to cart</button>
+                <!-- <a href="#" class="btn addtocart" data-product-id ="2">add to cart</a> -->
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item3">
                 <img src="image/americano.jpg" alt="">
                 <h3 class ="productname">americano</h3>
                 <div class="price pricevalue"> $10.99/- </div>
@@ -206,10 +180,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="3">add to cart</a>
+                <button onclick="addtocart(item3)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item4">
                 <img src="image/coffee.png" alt="">
                 <h3 class ="productname">Cappuccino</h3>
                 <div class="price pricevalue"> $10.99/- </div>
@@ -220,10 +194,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="4">add to cart</a>
+                <button onclick="addtocart(item4)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item5">
                 <img src="image/espresso.jpg" alt="">
                 <h3 class ="productname">espresso</h3>
                 <div class="price pricevalue"> $10.99/- </div>
@@ -234,7 +208,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="5">add to cart</a>
+                <button onclick="addtocart(item5)" class="btn addtocart">add to cart</button>
             </div>
 
         </div>
@@ -243,9 +217,9 @@
 
     <div class="swiper product-slider">
 
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper prodlist">
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item6">
                 <img src="image/donut.jpg" alt="">
                 <h3 class ="productname">Chocolate donuts</h3>
                 <div class="price pricevalue"> $4.99/-</div>
@@ -256,10 +230,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="6">add to cart</a>
+                <button onclick="addtocart(item6)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item7">
                 <img src="image/cupcakes.jpg" alt="">
                 <h3 class ="productname">Creamy cupcakes</h3>
                 <div class="price pricevalue"> $6.99/-</div>
@@ -270,10 +244,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="7">add to cart</a>
+                <button onclick="addtocart(item7)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item8">
                 <img src="image/bread2.jpg" alt="">
                 <h3 class ="productname">Sweet bread</h3>
                 <div class="price pricevalue"> $6.99/-</div>
@@ -284,10 +258,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="8">add to cart</a>
+                <button onclick="addtocart(item8)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item9">
                 <img src="image/feature-img-2.jpg" alt="">
                 <h3 class ="productname">Garlic breads</h3>
                 <div class="price pricevalue"> $10.99/- </div>
@@ -298,10 +272,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="9">add to cart</a>
+                <button onclick="addtocart(item9)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item10">
                 <img src="image/feature-img-3.jpg" alt="">
                 <h3 class ="productname">Fresh Fruit donuts</h3>
                 <div class="price pricevalue"> $10.99/- </div>
@@ -312,7 +286,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="10">add to cart</a>
+                <button onclick="addtocart(item10)" class="btn addtocart">add to cart</button>
             </div>
 
         </div>
@@ -321,10 +295,10 @@
 
     <div class="swiper product-slider">
 
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper prodlist">
 
             
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item11">
                 <img src="image/cake.jpg" alt="">
                 <h3 class ="productname">American heritage chocolate cake</h3>
                 <div class="price pricevalue"> $20.99/- </div>
@@ -335,10 +309,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="11">add to cart</a>
+                <button onclick="addtocart(item11)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item12">
                 <img src="image/cake2.jpg" alt="">
                 <h3 class ="productname">Chocolate Cake</h3>
                 <div class="price pricevalue"> $20.99/- </div>
@@ -349,10 +323,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="12">add to cart</a>
+                <button onclick="addtocart(item12)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item13">
                 <img src="image/cake3.jpg" alt="">
                 <h3 class ="productname">Straberry Cake</h3>
                 <div class="price pricevalue"> $20.99/- </div>
@@ -363,10 +337,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="13">add to cart</a>
+                <button onclick="addtocart(item13)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item14">
                 <img src="image/cake4.jpg" alt="">
                 <h3 class ="productname">Icecream fun</h3>
                 <div class="price pricevalue"> $20.99/- </div>
@@ -377,10 +351,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="14">add to cart</a>
+                <button onclick="addtocart(item14)" class="btn addtocart">add to cart</button>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box buyitems" id ="item15">
                 <img src="image/cake5.jpg" alt="">
                 <h3 class ="productname">Brownie</h3>
                 <div class="price pricevalue"> $20.99/- </div>
@@ -391,7 +365,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <a href="#" class="btn addtocart" data-product-id ="15">add to cart</a>
+                <button onclick="addtocart(item16)" class="btn addtocart">add to cart</button>
             </div>
 
         </div>
@@ -404,28 +378,28 @@
 
 <!-- categories section starts  -->
 
-<section class="categories" id="categories">
+<section class="categories products" id="categories">
 
-    <h1 class="heading">Your<span>Previous orders</span> </h1>
+    <h1 class="heading">Recent<span>Popular orders</span> </h1>
 
     <div class="box-container">
 
-        <div class="box">
+        <div class="box buyitems" id ="p1">
             <img src="image/feature-img-1.png" alt="">
             <h3 class ="productname">Black coffee</h3>
-            <a href="#" class="btn addtocart" data-product-id ="16">Add to cart</a>
+            <button onclick="addtocart(item1)" class="btn addtocart">add to cart</button>
         </div>
 
-        <div class="box">
+        <div class="box buyitems" id="p2">
             <img src="image/cake2.jpg" alt="">
             <h3 class ="productname">Chocolate cake</h3>
-            <a href="#" class="btn addtocart" data-product-id ="17">Add to cart</a>
+            <button onclick="addtocart(item12)" class="btn addtocart">add to cart</button>
         </div>
 
-        <div class="box">
+        <div class="box buyitems" id="p3">
             <img src="image/cupcakes.jpg" alt="">
             <h3 class ="productname">Creamy cupcakes</h3>
-            <a href="#" class="btn addtocart" data-product-id ="18">Add to cart</a>
+            <button onclick="addtocart(item7)" class="btn addtocart">add to cart</button>
         </div>
 
     </div>
@@ -521,7 +495,8 @@
                 </div>
                 <h3>Fun in me</h3>
                 <p>My weakness have always been food and men- in the order</p>
-                <a href="#" class="btn">Like it</a>
+                <button class="btn" id="btw">Like it</button>
+                <h1 id="like"></h1>
             </div>
         </div>
 
@@ -534,7 +509,8 @@
                 </div>
                 <h3>Inspiring Me</h3>
                 <p>Food is symbolic of love when words are inadequate</p>
-                <a href="#" class="btn">Like it</a>
+                <button class="btn" id="btw">Like it</button>
+                <h1 id="like"></h1>
             </div>
         </div>
 
@@ -547,7 +523,8 @@
                 </div>
                 <h3>Happy Me</h3>
                 <p>When you eat food with your family and friends, it always tastes better!</p>
-                <a href="#" class="btn">Like it</a>
+                <button class="btn" id="btw">Like it</button>
+                <h1 id="like"></h1>
             </div>
         </div>
 
@@ -601,6 +578,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
@@ -608,6 +596,9 @@
 <script src="js/cartscript.js"></script>
 <script src="js/search.js"></script>
 <script src="js/user.js"></script>
+<script src="js/liked.js"></script>
+
+
 
 </body>
 </html>
